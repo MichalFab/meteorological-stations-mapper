@@ -49,7 +49,7 @@ public class StationsRepository implements StationsRepositoryI<StationEntity, In
         return sessionFactory;
     }
 
-    public Session getCurrentSession() {
+    private Session getCurrentSession() {
         return currentSession;
     }
 
@@ -79,10 +79,7 @@ public class StationsRepository implements StationsRepositoryI<StationEntity, In
     public List<StationEntity> fetchAll() {
         Optional<List> allStations = Optional.ofNullable(getCurrentSession()
                 .createQuery("from station_data").list());
-        if (allStations.isPresent()) {
-            return (List<StationEntity>) allStations.get();
-        }
-        return List.of(new StationEntity());
+        return allStations.map(list -> (List<StationEntity>) list).orElseGet(() -> List.of(new StationEntity()));
     }
 
     @Override

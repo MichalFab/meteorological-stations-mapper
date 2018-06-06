@@ -1,14 +1,17 @@
 package mapper;
 
-import jdk.incubator.http.HttpClient;
-import jdk.incubator.http.HttpRequest;
-import jdk.incubator.http.HttpResponse;
 import models.Coordinates;
+import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.io.BufferedReader;
 import java.io.IOException;
-
-import java.net.URI;
-
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.logging.Logger;
 
 
@@ -16,6 +19,7 @@ public class GoogleLocationManager {
 
     private final String GOOGLE_API_URL = "https://maps.googleapis.com";
     private final String URL_PATH = "/maps/api/geocode/json?key=AIzaSyCwXbXj-N_QT7SvZE8bgNKsay7aJjTwr_4&address=";
+    private final String LOCATION_NOT_FOUND = "not_found";
     private Logger logger;
 
     public GoogleLocationManager() {
@@ -23,58 +27,60 @@ public class GoogleLocationManager {
     }
 
 
-    public Coordinates getCoordinatesForLocation(String street, String city){
-        logger.info("Getting coordinates from json");
-        String locationDataString = getStringLocationData(street.concat(",%20").concat(city));
-        System.out.println(locationDataString);
-        JSONObject json = new JSONObject(locationDataString);
-        JSONObject location = json.getJSONObject("location");
-        Double latitude = location.getDouble("lat");
-        Double longitude = location.getDouble("lng");
+    public Coordinates getCoordinatesForLocation(String street, String city) {
 
-        return Coordinates.builder().latitude(latitude).longitude(longitude).build();
-    }
-
-
-
-    private String getStringLocationData(String location) {
-
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(GOOGLE_API_URL.concat(URL_PATH).concat(location).concat("&sensor=false")))
-                .build();
-        HttpResponse<String> response =
-                null;
+        String locationDataString = "";
+        logger.info("Getting coordinates from json : " + "street: " + street);
         try {
-            response = client.send(request, HttpResponse.BodyHandler.asString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            String encodedStreetCity = URLEncoder.encode(street.concat(",").concat(city));
+            locationDataString = getStringLocationData(encodedStreetCity);
+        } catch (LocationNotFoundException e) {
+            logger.warning("Problem with getting location data : " + e.getMessage());
         }
 
-        System.out.println(response.body());
-return "";
+        return fetchLocationFromJson(locationDataString);
     }
-//        try {
-//            URL googleUrl = new URL(GOOGLE_API_URL.concat(URL_PATH).concat(location).concat("&sensor=false"));
-//            logger.info("GETTING DATA FROM " + googleUrl);
-//            URLConnection connection = googleUrl.openConnection();
-//            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
-//            StringBuilder locationJson = new StringBuilder();
-//            while (in.readLine() != null) {
-//                System.out.println(in.readLine());
-////                locationJson.append(in.readLine());
-//            }
-//            return locationJson.toString();
-//        } catch (MalformedURLException e) {
-//            logger.warning("Malformed URL has occurred");
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            logger.warning("Open connection problem");
-//            e.printStackTrace();
-//        }
-//        return "";
-//    }
 
+
+    private String getStringLocationData(String location) throws LocationNotFoundException {
+
+        StringBuilder preparedData = new StringBuilder();
+        try {
+            URL url = new URL(GOOGLE_API_URL.concat(URL_PATH).concat(location).concat("&sensor=false"));
+            URLConnection uc = url.openConnection();
+            BufferedReader in = new BufferedReader(new InputStreamReader(uc
+                    .getInputStream()));
+            String inputLine;
+
+            while ((inputLine = in.readLine()) != null) {
+                System.out.println(inputLine
+                );
+                preparedData.append(inputLine);
+            }
+            in.close();
+
+        } catch (MalformedURLException exc) {
+            logger.warning("Malformed URL! " + exc.getMessage());
+        } catch (IOException exc) {
+            logger.warning("IOException while reading from Google API URL: " + exc.getMessage());
+        }
+
+        String preparedDataString = preparedData.toString();
+        if (preparedDataString.isEmpty()) {
+            throw new LocationNotFoundException();
+        } else {
+            return preparedDataString;
+        }
+    }
+
+    private Coordinates fetchLocationFromJson(String locationDataString) {
+        JSONObject json = new JSONObject(locationDataString);
+        JSONArray result = json.getJSONArray("results");
+        JSONObject firstResult = result.getJSONObject(0);
+        JSONObject geometry = firstResult.getJSONObject("geometry");
+        JSONObject location = geometry.getJSONObject("location");
+        return Coordinates.builder()
+                .latitude(location.getDouble("lat"))
+                .longitude(location.getDouble("lng")).build();
+    }
 }

@@ -28,6 +28,11 @@ public class StationEntity {
     @Column
     private String address;
 
+    @Column
+    private Double latitude;
+
+    @Column
+    private Double longitude;
 
     public void setState(String state) {
         this.state = state;
@@ -51,5 +56,21 @@ public class StationEntity {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 }

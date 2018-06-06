@@ -1,6 +1,6 @@
-﻿DOLNOŚLĄSKIE;DsBogatMob;DsBogatFrancMOB;Bogatynia Mobil;Bogatynia; Francuska
+﻿DOLNOŚLĄSKIE;DsBogatMob;DsBogatFrancMOB;Bogatynia Mobil;Bogatynia; Francuska 1
 DOLNOŚLĄSKIE;DsCzer02;DsCzerStraza;Czerniawa;Czerniawa; Strażacka
-DOLNOŚLĄSKIE;DsDzia01;DsDzialoszyn;Działoszyn;Działoszyn;
+DOLNOŚLĄSKIE;DsDzia01;DsDzialoszyn;Działoszyn;Działoszyn; Piłsudskiego 18
 DOLNOŚLĄSKIE;DsDzierPilsA;DsDziePilsud;Dzierżoniów - Piłsudskiego;Dzierżoniów; Piłsudskiego
 DOLNOŚLĄSKIE;DsGlogWita;DsGlogWiStwo;Głogów - Wita Stwosza;Głogów; Wita Stwosza
 DOLNOŚLĄSKIE;DsJeleniaGoraA;DsJelGorOgin;Jelenia Góra - Ogińskiego;Jelenia Góra; Ogińskiego 6
@@ -10,9 +10,8 @@ DOLNOŚLĄSKIE;DsLegRzeczA;DsLegAlRzecz;Legnica - Rzeczypospolitej;Legnica;al. R
 DOLNOŚLĄSKIE;DsNRudaSrebP;DsNowRudSreb;Nowa Ruda - Srebrna;Nowa Ruda; Srebrna 1a
 DOLNOŚLĄSKIE;DsOlawaSemi;DsOlawZolnAK;Oława - Żołnierzy AK;Oława; Żołnierzy AK 9
 DOLNOŚLĄSKIE;DsOlesnicaPM;DsOlesBrzozo;Oleśnica - Brzozowa;Oleśnica; Brzozowa 7
-DOLNOŚLĄSKIE;DsOsieczow;DsOsieczow21;Osieczów;Osieczów;
 DOLNOŚLĄSKIE;DsPolkKasz;DsPolKasztan;Polkowice - Kasztanowa;Polkowice; Kasztanowa
-DOLNOŚLĄSKIE;DsSniezka;DsSniezkaObs;Śnieżka;;Śnieżka
+DOLNOŚLĄSKIE;DsSniezka;DsSniezkaObs;Śnieżka;Śnieżka
 DOLNOŚLĄSKIE;DsSwidMob;DsSwidnMarciMOB;Świdnica - Marcinkowskiego;Świdnica; Karola Marcinkowskiego 4-6
 DOLNOŚLĄSKIE;DsSwidRynek;DsSwidnRynek;Świdnica - Rynek;Świdnica; Rynek 43
 DOLNOŚLĄSKIE;DsSzczDZPM;DsSzczaKolej;Szczawno-Zdrój - Kolejowa;Szczawno-Zdrój; Kolejowa 14
@@ -33,7 +32,6 @@ KUJAWSKO-POMORSKIE;KpCiechoTezniowa;KpCiechTezni;Ciechocinek;Ciechocinek; Tężn
 KUJAWSKO-POMORSKIE;KpAirpGrudz;KpGrudPilsud;Grudziądz Airpointer;Grudziądz; Piłsudskiego 51
 KUJAWSKO-POMORSKIE;KpGrudzStar;KpGrudSienki;Grudziądz Starówka;Grudziądz; Sienkiewicza 27
 KUJAWSKO-POMORSKIE;KpAirpInowr;KpInowSolank;Inowrocław Airpointer;Inowrocław; Solankowa
-KUJAWSKO-POMORSKIE;KpKoniczZMSP;KpKoniczynka;Koniczynka;Koniczynka;
 KUJAWSKO-POMORSKIE;KpNakloPiotraSkargi;KpNaklSkargi;Nakło Piotra Skargi;Nakło nad Notecią; Piotra Skargi
 KUJAWSKO-POMORSKIE;KpTorunDziewk;KpToruDziewu;Toruń POLICJA;Toruń; Dziewkiego 1
 KUJAWSKO-POMORSKIE;KpTorunKaszownik;KpToruKaszow;Toruń, KASZOWNIK;Toruń; Przy Kaszowniku
@@ -45,10 +43,9 @@ KUJAWSKO-POMORSKIE;KpAirpWiktorowo;KpWiktorowoG;Lafarge- Airpointer;Wiktorowo;Wi
 KUJAWSKO-POMORSKIE;KpAirpWlocWod;KpWloclChelmMOB;Airpointer Włocławek;Włocławek; Chełmicka
 KUJAWSKO-POMORSKIE;KpWloclOkrzei;KpWloclOkrze;Włocławek OKRZEI;Włocławek; Okrzei
 KUJAWSKO-POMORSKIE;KpWloclSielska;KpWloclSiels;Włocławek Sielska DMD;Włocławek; Sielska 3
-KUJAWSKO-POMORSKIE;KpZielBoryTuch;KpZielBoryTu;Bory Tucholskie;Zielonka;
+KUJAWSKO-POMORSKIE;KpZielBoryTuch;KpZielBoryTu;Bory Tucholskie;Zielonka; Prymasa Stefana Wyszyńskiego
 KUJAWSKO-POMORSKIE;KpZninPotockiego;KpZninPotock;Żnin Starostwo Potockiego;Żnin; Potockiego 1
 LUBELSKIE;LbBialaPOrzechowa;LbBiaPodOrze;WIOŚ-DBP-Orzechowa;Biała Podlaska; Orzechowa
-LUBELSKIE;LbBialySlupRPN_Auto;LbBiaSlupRPN;Biały Słup Automat;Biały Słup;
 LUBELSKIE;LbChelmJagWIOS;LbChelJagiel;Chełm  Jagiellońska;Chełm; Jagiellońska 64
 LUBELSKIE;LbJarczew;LbJarczWolaM;IMGW-Jarczew;Jarczew; Jarczew
 LUBELSKIE;LbKrasnikKoszarowa;LbKrasKoszar;Kraśnik  Koszarowa 10A;Kraśnik; Koszarowa 10A
@@ -57,7 +54,7 @@ LUBELSKIE;LbLublin_Sliwins_5;LbLubSliwins;Lublin  Śliwińskiego 5;Lublin; Śliw
 LUBELSKIE;LbPwyKarp;LbPKarpin;;Puławy; Karpińskiego 5
 LUBELSKIE;LbPwySkowieszynska;LbPSkowie;Puławy  Skowieszyńska;Puławy; Skowieszyńska 51
 LUBELSKIE;LbRadzyPSitkowskiego;LbRadzPodSit;WIOŚ-RadzyńP-Sitkowskiego;Radzyń Podlaski; Sitkowskiego 1b
-LUBELSKIE;LbWilczopole;LbWilczopole;Lublin-Podmiejska;Wilczopole;
+LUBELSKIE;LbWilczopole;LbWilczopole;Lublin-Podmiejska;Wilczopole; Różana 1;
 LUBELSKIE;LbZamoscHrubieszowsk;LbZamoHrubie;Zamość  Hrubieszowska 69A;Zamość; Hrubieszowska 69A
 ŁÓDZKIE;LdBrzeziWIOSMReforma;LdBrzeReform;Brzeziny-Reformacka1;Brzeziny; Reformacka 1
 ŁÓDZKIE;LdGajewWIOSAGajew;LdGajewUjWod;Gajew;Gajew;Ujęcie wody
@@ -88,8 +85,6 @@ LUBELSKIE;LbZamoscHrubieszowsk;LbZamoHrubie;Zamość  Hrubieszowska 69A;Zamość
 ŁÓDZKIE;LdZgierzWIOSAMielcza;LdZgieMielcz;Zgierz-Śródmieście;Zgierz; Mielczarskiego 1
 LUBUSKIE;LuGorzowWIOS_AUT;LuGorzKosGdy;Gorzów Wlkp.  Kosynierów Gdyńskich;Gorzów Wielkopolski; Kosynierów Gdyńskich
 LUBUSKIE;LuGorzowWIOS_MAN;LuGorzPilsud;Gorzów Wlkp.  Piłsudskiego;Gorzów Wielkopolski; Piłsudskiego
-LUBUSKIE;LuSmobytWIOS_AUT;LuSmolBytnic;Smolary Bytnickie;Smolary Bytnickie;
-LUBUSKIE;LuScWIOS_MOB;LuScDudka;Scin  Dudka;Scin; Dudka
 LUBUSKIE;LuWschowWIOS_AUT;LuWsKaziWiel;Wschowa  Kazimierza Wielkiego;Wschowa; Kazimierza Wielkiego
 LUBUSKIE;LuZaryWIOS_AUT;LuZarySzyman;Żary,  Szymanowskiego 8;Żary; Szymanowskiego 8
 LUBUSKIE;LuZgoraWIOS_AUT;LuZielKrotka;Zielona Góra  Krótka;Zielona Góra; Krótka
@@ -149,13 +144,13 @@ OPOLSKIE;OpZdze2a;OpZdziePiast;Zdzieszowice automat 2;Zdzieszowice; Piastów 6
 PODLASKIE;PdBialyPodmiejska;PdBialPie;Białystok-Podmiejska;Białystok; 42 Pułku Piechoty
 PODLASKIE;PdBialyWarszawska;PdBialWarsza;Białystok-Warszawska;Białystok; Warszawska 75 A
 PODLASKIE;PdBialyMiejska;PdBialWaszyn;Białystok-Miejska;Białystok; Waszyngtona 16
-PODLASKIE;PdBorsuWiejska;PdBorsukowiz;Borsukowizna-Wiejska;Borsukowizna;
+PODLASKIE;PdBorsuWiejska;PdBorsukowiz;Borsukowizna-Wiejska;Borsukowizna; Borsukowizna 1;
 PODLASKIE;PdLomzaSikorskiego;PdLomSikorsk;Lomza Sikorskiego 48;Łomża; Sikorskiego 48
 PODLASKIE;PdSuwPski;PdSuwPski;Suwałki,  Pułaskiego 73;Suwałki; Pułaskiego
 PODKARPACKIE;PkDebicaWIOSGrottgera;PkDebiGrottg;Dębica-Grottgera-WIOS;Dębica;Grottgera 3
 PODKARPACKIE;PkJarosWIOSPWSTE;PkJarosPruch;Jarosław-PWSTE-WIOS;Jarosław; Pruchnicka
 PODKARPACKIE;PkJasloWIOSSikorskiego;PkJasloSikor;Jaslo-Sikorskiego-WIOS;Jasło; Sikorskiego
-PODKARPACKIE;PkKrempnaWIOSMPN;PkKrempnaMPN;Krempna-MPN-WIOS;Krempna;
+PODKARPACKIE;PkKrempnaWIOSMPN;PkKrempnaMPN;Krempna-MPN-WIOS;Krempna; Krepna 38
 PODKARPACKIE;PkKrosnoWIOSKletowki;PkKrosKletow;Krosno-Kletówki;Krosno; Kletówki
 PODKARPACKIE;PkMielecWIOSSolskiego;PkMielSolski;Mielec-MOSIR-WIOS;Mielec; Solskiego
 PODKARPACKIE;PkMielWIOSZarzStr;PkMielZaStre;Mielec - Zarząd Strefy;Mielec; Zarząd Strefy
@@ -164,7 +159,7 @@ PODKARPACKIE;PkPrzemyslWIOSGrunw;PkPrzemGrunw;Przemysl-Grunwaldzka-WIOS;Przemyś
 PODKARPACKIE;PkRzeszWIOSNoweMiasto;PkRzeszRejta;Rzeszów-Nowe Miasto;Rzeszów; Rejtana
 PODKARPACKIE;PkSanokWIOSSadowa;PkSanoSadowa;Sanok-Sadowa-WIOS;Sanok; Sadowa
 PODKARPACKIE;PkTarnobWIOSDabrow;PkTarnDabrow;Tarnobrzeg-M.Dabrowskiej-WIOS;Tarnobrzeg; Marii Dąbrowskiej
-POMORSKIE;Pm.D;PmGac;WIOŚ Gać - Słowiński Park Narodowy;Gać;
+POMORSKIE;Pm.D;PmGac;WIOŚ Gać - Słowiński Park Narodowy;Smołdzino; Bohaterów Warszawy 1A
 POMORSKIE;Pm.00.s481m;PmGdaGleboka;WIOŚ Gdańsk - Głęboka;Gdańsk; Głęboka 11
 POMORSKIE;Pm.a02a;PmGdaKacze02;AM2 Gdańsk Stogi;Gdańsk; Kaczeńce
 POMORSKIE;Pm.aw08m;PmGdaLecz08m;WIOŚ Gdańsk - Leczkowa;Gdańsk; Leczkowa
@@ -180,9 +175,8 @@ POMORSKIE;Pm.a10a;PmGdyWendy10;AM10 Gdynia Śródmieście;Gdynia; Wendy
 POMORSKIE;Pm05KARTw01m;PmKartWejher;WIOŚ Kartuzy;Kartuzy; Wejhera
 POMORSKIE;Pm.AM12.a;PmKosTargo12;AM12 Kościerzyna Targowa;Kościerzyna; Targowa
 POMORSKIE;Pm.Kwidz.Sport.m;PmKwiSportow;WIOŚ Kwidzyn - Sportowa;Kwidzyn; Sportowa
-POMORSKIE;Pm08LEBAiEMEPa;PmLebaRabkaE;IMGW Łeba - Rąbka;Łeba;
+POMORSKIE;Pm08LEBAiEMEPa;PmLebaRabkaE;IMGW Łeba - Rąbka;Łeba; Paderewskiego 13
 POMORSKIE;Pm.AM16.a;PmLebMalcz16;AM16 Lębork Malczewskiego;Lębork; Malczewskiego
-POMORSKIE;Pm.AM17.a;PmLinieKos17;AM17 Liniewko Kościerskie;Liniewko Kościerskie;
 POMORSKIE;Pm.AM15.a;PmMalMicki15;AM15 Malbork Mickiewicza;Malbork; Mickiewicza
 POMORSKIE;Pm.63.wDSAa;PmSlupKniazi;AM11 Słupsk Kniaziewicza;Słupsk; Kniaziewicza 30
 POMORSKIE;Pm.63.wDSPm;PmSlupOrzesz;WIOŚ Słupsk Orzeszkowej;Słupsk; Orzeszkowej
@@ -199,7 +193,6 @@ POMORSKIE;Pm11WLADw07m;PmWladywHallera;WIOŚ Władysławowo - Hallera;Władysła
 ŚWIĘTOKRZYSKIE;SkOzarowOsWz52;SkOzarOsWzgo;Ożarów Os. Wzgórze 52;Ożarów;os. Wzgórze 52
 ŚWIĘTOKRZYSKIE;SkPolanRuszcz;SkPolaRuszcz;Połaniec,  Ruszczańska;Połaniec; Ruszczańska 23
 ŚWIĘTOKRZYSKIE;SkStaracZlota2;SkStaraZlota;WIOŚ, Starachowice,  Złota;Starachowice; Złota
-ŚWIĘTOKRZYSKIE;SkSwKrzyzZM;SkSwietKrzyz;Stacja Monitoringu UH-P w Kielcach;Święty Krzyż;
 ŚWIĘTOKRZYSKIE;SkPolanTrzc;SkTrzciOsiek;Trzcianka;Trzcianka;Trzcianka 7
 ŚLĄSKIE;SlBielbBiel_kossa;SlBielKossak;Bielsko B._kossak-WIOŚ;Bielsko-Biała; Kossak-Szczuckiej
 ŚLĄSKIE;SlBielbBiel_stern;SlBielSterni;Bielsko-Biała_sternicza;Bielsko-Biała; Sternicza 4
@@ -244,7 +237,6 @@ WIELKOPOLSKIE;WpKonin311009D009102;WpKoniWyszyn;Konin,  Wyszyńskiego 3a;Konin; 
 WIELKOPOLSKIE;WpLesznoPM10/11;WpLeszKiepur;WpLesznoPM10/11;Leszno; Kiepury
 WIELKOPOLSKIE;WpNowyTomyslPM10/11;WpNoTomSzpit;WpNowyTomyslPM10/11;Nowy Tomyśl; Szpitalna
 WIELKOPOLSKIE;WpOstrowWlkpPM10;WpOstWieWyso;Ostrow Wlkp.,  Wysocka 57;Ostrów Wielkopolski; Wysocka 57
-WIELKOPOLSKIE;WpWKP004;WpPiaskiKrzy;WKPKrzyzowka;Krzyżówka;
 WIELKOPOLSKIE;WpPila5710111;WpPilaKusoci;Pila,  Kusocinkiego;Piła; Kusocińskiego
 WIELKOPOLSKIE;WpPleszewPM10/14;WpPleszAlMic;WpPleszew;Pleszew;al. Mickiewicza
 WIELKOPOLSKIE;WpPoznanPOSIRPM10/11;WpPoznChwial;WpPoznanPOSIRPM10/11;Poznań; Chwiałkowskiego
@@ -252,7 +244,7 @@ WIELKOPOLSKIE;WpWKP002;WpPoznDabrow;WKPPoznan 2;Poznań; Dąbrowskiego 169
 WIELKOPOLSKIE;WpWKP001;WpPoznPolank;WKPPoznan1;Poznań; Polanki
 WIELKOPOLSKIE;WpPoznanSzymanowskiego17;WpPoznSzyman;Poznan,  Szymanowskiego 17;Poznań; Szymanowskiego 17
 WIELKOPOLSKIE;WpTarnowoPodgornePM10/10;WpTarPodZach;WpTarnowoPodgornePM10/10;Tarnowo Podgórne; Zachodnia
-WIELKOPOLSKIE;WpWagrowiecPM10/10;WpWagrowLipo;WpWagrowiecPM10/10;Wągrowiec;
+WIELKOPOLSKIE;WpWagrowiecPM10/10;WpWagrowLipo;WpWagrowiecPM10/10;Wągrowiec; Kolejowa 2
 ZACHODNIOPOMORSKIE;ZpKoszalin005;ZpKoszArKraj;Koszalin_ArmiiKrajowej;Koszalin; Armii Krajowej
 ZACHODNIOPOMORSKIE;ZpKoszalin006;ZpKoszSpasow;Koszalin_Spasowskiego;Koszalin; Spasowskiego 2f
 ZACHODNIOPOMORSKIE;ZpMysMysliborz007;ZpMyslZaBram;Myślibórz_ZaBramką;Myślibórz; Za Bramką 8
