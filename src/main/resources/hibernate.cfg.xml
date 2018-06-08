@@ -28,6 +28,7 @@
         <property name="show_sql">true</property>
 
         <mapping class="models.StationEntity" />
+        <mapping class="models.StationDailyData" />
 
     </session-factory>
 </hibernate-configuration>

@@ -1,14 +1,15 @@
 package models;
 
 import javax.persistence.*;
+import java.util.Set;
 
-@Entity(name = "station_data")
+@Entity
 @Table(name = "station_data")
 public class StationEntity {
 
     @Id
     @GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
-    private int id;
+    private int stationId;
 
     @Column
     private String state;
@@ -33,6 +34,11 @@ public class StationEntity {
 
     @Column
     private Double longitude;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "stationId")
+    private Set<StationDailyData> stationDailyData;
+
 
     public void setState(String state) {
         this.state = state;
