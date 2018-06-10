@@ -4,6 +4,7 @@ import mapper.CoordinatesAdder;
 import mapper.StationCsvMapper;
 import models.StationEntity;
 import repo.StationsRepository;
+
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -17,9 +18,28 @@ public class AppMain {
         CoordinatesAdder coordinatesAdder = new CoordinatesAdder();
         List<StationEntity> stationsWithCoordinates = coordinatesAdder.addCoordinates(stations);
         StationsRepository repository = new StationsRepository();
-        repository.openCurrentSessionwithTransaction();
         repository.addAllStations(stationsWithCoordinates);
-        repository.closeCurrentSessionwithTransaction();
+//
+//
+//        StationDailyData stationDailyData = new StationDailyData().builder().date(LocalDate.now()).pollutionValue(12.333).stationCode("test").build();
+////        repository.
+//        repository.closeCurrentSessionwithTransaction();
+
+
+        StationEntity stationEntity = new StationEntity();
+        stationEntity.setAddress("dupa");
+        stationEntity.setCity("krr");
+        repository.addStationEntity(stationEntity);
+
+        List<StationEntity> all = repository.fetchAll();
+        System.out.println("dupa");
+        System.out.println(all.get(0).toString());
+///
+//        StationsRepository repo = new StationsRepository();
+//        repo.addAllStations(stationsWithCoordinates);
+//        repo.fetchAll().forEach(System.out::println);
+
+
     }
 
 

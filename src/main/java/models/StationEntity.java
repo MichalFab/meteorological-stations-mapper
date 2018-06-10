@@ -8,7 +8,7 @@ import java.util.Set;
 public class StationEntity {
 
     @Id
-    @GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int stationId;
 
     @Column
@@ -35,7 +35,7 @@ public class StationEntity {
     @Column
     private Double longitude;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "stationId")
     private Set<StationDailyData> stationDailyData;
 
@@ -78,5 +78,21 @@ public class StationEntity {
 
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
+    }
+
+    @Override
+    public String toString() {
+        return "StationEntity{" +
+                "stationId=" + stationId +
+                ", state='" + state + '\'' +
+                ", oldCode='" + oldCode + '\'' +
+                ", code='" + code + '\'' +
+                ", stationName='" + stationName + '\'' +
+                ", city='" + city + '\'' +
+                ", address='" + address + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", stationDailyData=" + stationDailyData +
+                '}';
     }
 }

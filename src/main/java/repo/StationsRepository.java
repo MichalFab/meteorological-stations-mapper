@@ -1,89 +1,48 @@
 package repo;
 
 import models.StationEntity;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
-
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.List;
-import java.util.Optional;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.function.Function;
 
-public class StationsRepository implements StationsRepositoryI<StationEntity, Integer> {
-    private Session currentSession;
-    private Transaction currentTransaction;
-    private Logger logger;
+public class StationsRepository {
 
-    public StationsRepository() {
-        this.logger = Logger.getLogger(StationsRepository.class.getName());
+    private EntityManagerFactory factory = Persistence.createEntityManagerFactory("stationsApp");
+    private EntityManager entityManager = factory.createEntityManager();
+
+
+    private <T> T withinTransaction(Function<EntityManager, T> code) {
+        T result;
+        try {
+            entityManager.getTransaction().begin();
+            result = code.apply(entityManager);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+        return result;
     }
 
-    public Session openCurrentSession() {
-        currentSession = getSessionFactory().openSession();
-        return currentSession;
-    }
-
-    public Session openCurrentSessionwithTransaction() {
-        currentSession = getSessionFactory().openSession();
-        currentTransaction = currentSession.beginTransaction();
-        return currentSession;
-    }
-
-    public void closeCurrentSession() {
-        currentSession.close();
-    }
-
-    public void closeCurrentSessionwithTransaction() {
-        currentTransaction.commit();
-        currentSession.close();
-    }
-
-    private static SessionFactory getSessionFactory() {
-        Configuration configuration = new Configuration().addAnnotatedClass(StationEntity.class).configure();
-        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
-                .applySettings(configuration.getProperties());
-        SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
-        return sessionFactory;
-    }
-
-    private Session getCurrentSession() {
-        return currentSession;
-    }
-
-    public void setCurrentSession(Session currentSession) {
-        this.currentSession = currentSession;
-    }
-
-    public Transaction getCurrentTransaction() {
-        return currentTransaction;
-    }
-
-    public void setCurrentTransaction(Transaction currentTransaction) {
-        this.currentTransaction = currentTransaction;
+    public void addStationEntity(StationEntity stationEntity) {
+        withinTransaction(entityManager -> {
+            entityManager.persist(stationEntity);
+            return stationEntity;
+        });
     }
 
     public void addAllStations(List<StationEntity> stations) {
-        try {
-            stations.forEach(station -> getCurrentSession().save(station));
-            logger.log(Level.INFO, "Successfully inserted " + stations.size() + "records");
-        } catch (Exception e) {
-            logger.log(Level.WARNING, "Inserting error");
-            e.printStackTrace();
-        }
+        withinTransaction(entityManager1 -> {
+            stations.forEach(station -> entityManager.persist(station));
+            return stations;
+        });
     }
 
-    @Override
     public List<StationEntity> fetchAll() {
-        Optional<List> allStations = Optional.ofNullable(getCurrentSession()
-                .createQuery("from station_data").list());
-        return allStations.map(list -> (List<StationEntity>) list).orElseGet(() -> List.of(new StationEntity()));
-    }
-
-    @Override
-    public void persist(StationEntity entity) {
-
+      return  withinTransaction(entityManager -> entityManager
+                 .createQuery("SELECT s FROM StationEntity s", StationEntity.class)
+                 .getResultList());
     }
 }

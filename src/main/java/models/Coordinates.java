@@ -17,7 +17,7 @@ public class Coordinates {
         return latitude;
     }
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
 
@@ -29,7 +29,7 @@ public class Coordinates {
                 '}';
     }
 
-     public static class Builder {
+    public static class Builder {
         private Double longitude;
         private Double latitude;
 
