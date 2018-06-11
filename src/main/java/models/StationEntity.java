@@ -35,10 +35,6 @@ public class StationEntity {
     @Column
     private Double longitude;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "stationId")
-    private Set<StationDailyData> stationDailyData;
-
 
     public void setState(String state) {
         this.state = state;
@@ -92,7 +88,6 @@ public class StationEntity {
                 ", address='" + address + '\'' +
                 ", latitude=" + latitude +
                 ", longitude=" + longitude +
-                ", stationDailyData=" + stationDailyData +
                 '}';
     }
 }

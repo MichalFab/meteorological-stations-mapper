@@ -1,6 +1,8 @@
 package repo;
 
+import models.StationDailyData;
 import models.StationEntity;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -40,9 +42,16 @@ public class StationsRepository {
         });
     }
 
+    public void addMeasurementsList(List<StationDailyData> stationDailyData) {
+        withinTransaction(entityManager1 -> {
+            stationDailyData.forEach(stationDailyData1 -> entityManager.persist(stationDailyData1));
+            return stationDailyData;
+        });
+    }
+
     public List<StationEntity> fetchAll() {
-      return  withinTransaction(entityManager -> entityManager
-                 .createQuery("SELECT s FROM StationEntity s", StationEntity.class)
-                 .getResultList());
+        return withinTransaction(entityManager -> entityManager
+                .createQuery("SELECT s FROM StationEntity s", StationEntity.class)
+                .getResultList());
     }
 }
