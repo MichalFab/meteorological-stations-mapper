@@ -34,8 +34,14 @@ The **station_daily_data** entity contains fields:
 | stationCode | String      |  
 | typeOfPollution | String (actual: PM10 & PM2.5)      |  
 
-Sample measurements data: 
+Sample measurements data: <bR>
+
 ![alt text](https://preview.ibb.co/jQANC8/Przechwytywanie.png )
+
+Sample station data: <br>
+
+![alt text](https://preview.ibb.co/ix0KQT/Przechwytywanie.png)
+
 
 Thanks to this application I have obtained almost a million of measurement data that will be used to create applications for visualization and prediction of air pollution in Poland. 
 
