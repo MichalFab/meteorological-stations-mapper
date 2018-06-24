@@ -82,7 +82,9 @@ public class CsvPollutionMapper {
                 .split("-")[0]
                 .concat("-01-01");
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        return LocalDate.parse(yearOfMeasurements, formatter);
+
+
+        return LocalDate.parse(yearOfMeasurements, formatter).plusDays(1);
     }
 
     public File[] getAllMeasurementFilesFromFolder() {
